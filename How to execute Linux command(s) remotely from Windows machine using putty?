@@ -1,0 +1,2 @@
+@echo off
+start putty -ssh 10.10.200.200 -l root -pw 12345 -m "C:\commands.txt" -t
