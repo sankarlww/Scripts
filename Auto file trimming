@@ -4,10 +4,9 @@ z=`ls -l /var/mail/root | awk '{print $5}'`
 if [ "$z" -gt 2147483648 ]
 then
 echo "Size is more than 2GB"
-echo "Going to Move the root file to root_bkp..."
-echo " "
+echo "Going to Move the root file to root.bkp"
 mv /var/mail/root /var/mail/root.$now &&
-echo "moveing is completed. \ntar is going on..."
+echo "moveing is completed. \ntar is going on"
 tar -cvfz /var/mail/root.$now.tar.gz /var/mail/root.$now &&
 echo "tar with zip is completed."
 echo "completed :)"
